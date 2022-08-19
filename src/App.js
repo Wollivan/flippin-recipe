@@ -121,7 +121,7 @@ function App() {
           <li>Mix dry &amp; wet ingredients.</li>
           <li>Dollop mix into hot greasy pan.</li>
           <li>
-            Wait for Michael Buble to start appearing on top of your dollop then
+            Wait for little Michael Bublés to start appearing on top of your dollop then
             flip.
           </li>
         </ol>
