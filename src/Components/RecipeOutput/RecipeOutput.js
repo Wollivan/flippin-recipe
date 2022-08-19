@@ -22,7 +22,7 @@ export default function RecipeOutput({ recipe, toFixedIfNecessary }) {
         </span>
       </div>
       <div className="recipe__row">
-        <span className="recipe__row-title">BakingSoda:</span>{" "}
+        <span className="recipe__row-title">Baking Soda:</span>{" "}
         <span className="recipe__row-value">
           {toFixedIfNecessary(recipe.bakingSoda, 2)}g
         </span>
@@ -34,7 +34,7 @@ export default function RecipeOutput({ recipe, toFixedIfNecessary }) {
         </span>
       </div>
       <div className="recipe__row">
-        <span className="recipe__row-title">Butter:</span>{" "}
+        <span className="recipe__row-title">Melted Butter:</span>{" "}
         <span className="recipe__row-value">
           {toFixedIfNecessary(recipe.butter, 2)}g
         </span>

@@ -113,6 +113,19 @@ function App() {
         <h2>Your new recipe</h2>
         <RecipeOutput recipe={recipe} toFixedIfNecessary={toFixedIfNecessary} />
 
+        <h2>But how to cook pancake?</h2>
+        <p>Easy peas.</p>
+        <ol className="left">
+          <li>Mix dry ingredients.</li>
+          <li>Mix wet ingredients.</li>
+          <li>Mix dry &amp; wet ingredients.</li>
+          <li>Dollop mix into hot greasy pan.</li>
+          <li>
+            Wait for Michael Buble to start appearing on top of your dollop then
+            flip.
+          </li>
+        </ol>
+        <p>Thats pretty much it. Like I said. Easy peas.</p>
         <h2>Manipulate formula</h2>
         <p>
           If the desire takes you, you can also change the formula with which
