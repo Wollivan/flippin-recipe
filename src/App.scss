@@ -1,0 +1,85 @@
+$celadon-blue: #4281a4;
+$salmon: #e9806e;
+$jungle-green: #48a989;
+$beige: #edead0;
+$icterine: #f8f272;
+
+body {
+  background-color: $beige;
+}
+* {
+  font-family: "Source Code Pro", monospace;
+}
+h2 {
+  margin-top: 3rem;
+}
+.App {
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.logo {
+  width: 125px;
+  margin-top: 2rem;
+}
+.controls {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  &__button {
+    padding: 1rem;
+    border: none;
+    border: 3px solid black;
+    &:hover {
+      background-color: $celadon-blue;
+      color: #fff;
+    }
+
+    &-decrease {
+      @extend .controls__button;
+      background-color: $salmon;
+      color: #fff;
+    }
+    &-increase {
+      @extend .controls__button;
+      background-color: $jungle-green;
+      color: #fff;
+    }
+  }
+  &__input {
+    width: 25%;
+    border: 3px solid black;
+    text-align: center;
+    font-size: 2rem;
+  }
+}
+
+.recipe {
+  width: 95%;
+  margin: 0 auto 5rem auto;
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    border-bottom: 0.5px solid #bbb;
+    &-title {
+      font-weight: bold;
+    }
+    &-value {
+    }
+  }
+}
+
+// remove arrows on inputs
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
