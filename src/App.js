@@ -111,7 +111,7 @@ function App() {
           toFixedIfNecessary={toFixedIfNecessary}
         />
         <h2>Your new recipe</h2>
-        <RecipeOutput recipe={recipe} />
+        <RecipeOutput recipe={recipe} toFixedIfNecessary={toFixedIfNecessary} />
 
         <h2>Manipulate formula</h2>
         <p>
