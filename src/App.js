@@ -88,21 +88,20 @@ function App() {
       <header className="App-header">
         <img src={Logo} alt="logo" className="logo" />
         <h1>Flippin' Recipe Man!</h1>
-        <div>
-          <p>
-            Don't you just <i>love</i> it when a pancake recipe online tells you
-            to use <strong>an egg</strong>?
-          </p>
-          <p>I am also a huge fan of vague incomplete instructions.</p>
-          <p>
-            On the small chance you like to make food properly, use this app to
-            correctly measure out your ingrediants for pancakes based entirely
-            on the weight of the eggs.
-          </p>
-        </div>
+        <p>
+          Don't you just <i>love</i> it when a pancake recipe online tells you
+          to use <strong>an egg</strong>?
+        </p>
+        <p>I am also a huge fan of vague incomplete instructions.</p>
+        <p>
+          On the small chance you like to make food properly, use this app to
+          correctly measure out your ingrediants for pancakes based entirely on
+          the weight of the eggs.
+        </p>
       </header>
       <main>
         <h2>Set egg weight in grams</h2>
+        <h6>30g is what Tim likes</h6>
         <InputAndButtons
           changeValue={changeValue}
           setStateFunc={setEggWeight}
