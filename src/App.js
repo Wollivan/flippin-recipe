@@ -192,6 +192,11 @@ function App() {
           toFixedIfNecessary={toFixedIfNecessary}
         />
       </main>
+      <footer>
+        <a href="https://timjs.netlify.app" target="_blank" rel="noreferrer">
+          Made my a veritable pancake fiend
+        </a>
+      </footer>
     </div>
   );
 }

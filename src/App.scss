@@ -22,7 +22,13 @@ h2 {
   width: 125px;
   margin-top: 2rem;
 }
-
+a {
+  color: #000;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
 .controls {
   width: 95%;
   margin: 0 auto;
@@ -72,6 +78,9 @@ h2 {
   }
 }
 
+footer {
+  margin: 6rem 0 3rem 0;
+}
 // remove arrows on inputs
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
