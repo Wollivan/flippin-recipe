@@ -14,7 +14,7 @@ import Logo from "./images/logo.png";
 // 1 egg
 
 function App() {
-  const [eggWeight, setEggWeight] = useState(30);
+  const [eggWeight, setEggWeight] = useState(70);
   const [recipe, setRecipe] = useState({
     flour: 0,
     milk: 0,
@@ -23,12 +23,12 @@ function App() {
     salt: 0,
     butter: 0,
   });
-  const [flourMod, setFlourMod] = useState(4.5);
-  const [milkMod, setMilkMod] = useState(4.3334);
-  const [sugarMod, setSugarMod] = useState(1);
-  const [bakingSodaMod, setBakingSodaMod] = useState(0.13334);
-  const [saltMod, setSaltMod] = useState(0.16667);
-  const [butterMod, setButterMod] = useState(0.46667);
+  const [flourMod, setFlourMod] = useState(1.92857); //4.5
+  const [milkMod, setMilkMod] = useState(1.85714); //4.3334
+  const [sugarMod, setSugarMod] = useState(0.4); //1.0
+  const [bakingSodaMod, setBakingSodaMod] = useState(0.05714); //0.13334
+  const [saltMod, setSaltMod] = useState(0.07142); //0.16667
+  const [butterMod, setButterMod] = useState(0.2); //0.46667
 
   useEffect(() => {
     calculateFormula(eggWeight);
@@ -101,7 +101,10 @@ function App() {
       </header>
       <main>
         <h2>Set egg weight in grams</h2>
-        <h6>30g is what Tim likes</h6>
+        <p>
+          Weigh your egg(s) with shell on and put the weight in the inout below
+        </p>
+        <h6>70g is what Tim likes... about 1 egg</h6>
         <InputAndButtons
           changeValue={changeValue}
           setStateFunc={setEggWeight}
@@ -121,8 +124,8 @@ function App() {
           <li>Mix dry &amp; wet ingredients.</li>
           <li>Dollop mix into hot greasy pan.</li>
           <li>
-            Wait for little Michael Bublés to start appearing on top of your dollop then
-            flip.
+            Wait for little Michael Bublés to start appearing on top of your
+            dollop then flip.
           </li>
         </ol>
         <p>Thats pretty much it. Like I said. Easy peas.</p>
