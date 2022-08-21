@@ -29,10 +29,42 @@ function App() {
   const [bakingSodaMod, setBakingSodaMod] = useState(0.05714); //0.13334
   const [saltMod, setSaltMod] = useState(0.07142); //0.16667
   const [butterMod, setButterMod] = useState(0.2); //0.46667
+  const [preset, setPreset] = useState({});
+
+  const presetsList = {
+    americanPancakes: {
+      name: "American Pancakes",
+      flour: 1.92857,
+      milk: 1.85714,
+      sugar: 0.4,
+      bakingSoda: 0.05714,
+      salt: 0.07142,
+      butter: 0.2,
+    },
+    englishPancakes: {
+      name: "English Pancakes",
+      flour: 1,
+      milk: 2,
+      sugar: 3,
+      bakingSoda: 4,
+      salt: 5,
+      butter: 6,
+    },
+
+    veganPancakes: {
+      name: "Vegan Pancakes",
+      flour: 7,
+      milk: 6,
+      sugar: 5,
+      bakingSoda: 4,
+      salt: 3,
+      butter: 2,
+    },
+  };
 
   useEffect(() => {
     calculateFormula(eggWeight);
-
+    console.log(preset);
     // if (localStorage.getItem("formulaDetails")) {
     //   console.log("We have local storage");
     //   const formulaDetails = JSON.parse(localStorage.getItem("formulaDetails"));
@@ -44,6 +76,17 @@ function App() {
     //   setButterMod(formulaDetails.butterMod);
     // }
   }, [eggWeight, flourMod]);
+
+  const changePreset = (presetObj) => {
+    setFlourMod(presetObj.flour);
+    setMilkMod(presetObj.milk);
+    setSugarMod(presetObj.sugar);
+    setBakingSodaMod(presetObj.bakingSoda);
+    setSaltMod(presetObj.salt);
+    setButterMod(presetObj.butter);
+
+    setPreset(presetObj.name);
+  };
 
   const calculateFormula = () => {
     const newFlour = eggWeight * flourMod;
@@ -116,6 +159,26 @@ function App() {
         <h2>Your new recipe</h2>
         <RecipeOutput recipe={recipe} toFixedIfNecessary={toFixedIfNecessary} />
 
+        <div className="presets">
+          <button
+            className="presets__button"
+            onClick={() => changePreset(presetsList.americanPancakes)}
+          >
+            American
+          </button>
+          <button
+            className="presets__button"
+            onClick={() => changePreset(presetsList.englishPancakes)}
+          >
+            English
+          </button>
+          <button
+            className="presets__button"
+            onClick={() => changePreset(presetsList.veganPancakes)}
+          >
+            Vegan
+          </button>
+        </div>
         <h2>But how to cook pancake?</h2>
         <p>Easy peas.</p>
         <ol className="left">
